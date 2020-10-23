@@ -1,0 +1,8 @@
+{
+  "home": "Bienvenue sur le boilerplate React",
+  "dashboard": "Page tableau de bord",
+  "routes": {
+    "dashboard": "Tableau de bord",
+    "home": "Accueil"
+  }
+}

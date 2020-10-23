@@ -1,0 +1,8 @@
+{
+  "home": "Welcome to React boilerplate",
+  "dashboard": "Dashboard page",
+  "routes": {
+    "dashboard": "Dashboard",
+    "home": "Home"
+  }
+}
