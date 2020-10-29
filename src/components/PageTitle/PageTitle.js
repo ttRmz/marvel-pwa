@@ -1,9 +1,6 @@
 import React from 'react'
+import { Title } from './PageTitle.styles'
 
 export function PageTitle({ children, ...props }) {
-  return (
-    <h1 className="PageTitle" {...props}>
-      {children}
-    </h1>
-  )
+  return <Title {...props}>{children}</Title>
 }

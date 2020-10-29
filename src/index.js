@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './app'
+import { AppProviders } from './AppProviders'
 import './i18n'
 import './index.scss'
 import * as serviceWorker from './serviceWorker'
@@ -12,7 +13,12 @@ const mountingPoint = document.getElementById(
   process.env.REACT_APP_MOUNTING_POINT_ID,
 )
 
-ReactDOM.render(<App />, mountingPoint)
+ReactDOM.render(
+  <AppProviders>
+    <App />
+  </AppProviders>,
+  mountingPoint,
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
