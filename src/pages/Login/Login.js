@@ -7,8 +7,8 @@ export default function Dashboard() {
   const { t } = useTranslation()
 
   React.useEffect(() => {
-    setPageTitle('Dashboard')
+    setPageTitle('Login')
   }, [])
 
-  return <PageTitle>{t('dashboard')}</PageTitle>
+  return <PageTitle>{t('login')}</PageTitle>
 }
