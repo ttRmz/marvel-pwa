@@ -1,7 +1,7 @@
 import { stopEvent } from '@ttrmz/react-utils'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, Logo } from '../../components'
+import { Button, Input, Logo } from '../../components'
 import { useUserContext } from '../../contexts/user'
 import { setPageTitle } from '../../core/setPageTitle'
 import { LoginTitle, LoginWrapper } from './Login.styles'
@@ -38,7 +38,7 @@ export default function Login() {
 
       <form onSubmit={stopEvent}>
         {FORM_CONFIG.map(({ type, key }) => (
-          <input
+          <Input
             key={key}
             type={type}
             placeholder={t(`login.${key}`)}
