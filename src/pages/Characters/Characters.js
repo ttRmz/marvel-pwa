@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { PageTitle } from '../../components'
 import { useUserContext } from '../../contexts/user'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacters } from '../../server/characters/query'
@@ -18,8 +17,8 @@ export default function Characters() {
   }, [])
 
   return (
-    <PageTitle>
+    <span>
       {t('characters')} {user.username}
-    </PageTitle>
+    </span>
   )
 }

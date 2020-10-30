@@ -1,9 +1,10 @@
 import { stopEvent } from '@ttrmz/react-utils'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { PageTitle } from '../../components'
+import { Button, Logo } from '../../components'
 import { useUserContext } from '../../contexts/user'
 import { setPageTitle } from '../../core/setPageTitle'
+import { LoginTitle, LoginWrapper } from './Login.styles'
 
 const FORM_INITIAL_STATE = { username: '', password: '' }
 
@@ -30,8 +31,10 @@ export default function Login() {
   }
 
   return (
-    <main>
-      <PageTitle>{t('login.header')}</PageTitle>
+    <LoginWrapper>
+      <Logo extended />
+
+      <LoginTitle>{t('login.header')}</LoginTitle>
 
       <form onSubmit={stopEvent}>
         {FORM_CONFIG.map(({ type, key }) => (
@@ -44,12 +47,12 @@ export default function Login() {
           />
         ))}
 
-        <button type="submit" onClick={handleLogin}>
+        <Button type="submit" onClick={handleLogin}>
           {t('login.button')}
-        </button>
+        </Button>
       </form>
 
       {error && <p>{t('login.error')}</p>}
-    </main>
+    </LoginWrapper>
   )
 }
