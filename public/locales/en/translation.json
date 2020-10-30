@@ -1,8 +1,10 @@
 {
-  "home": "Welcome to React boilerplate",
-  "dashboard": "Dashboard page",
-  "routes": {
-    "dashboard": "Dashboard",
-    "home": "Home"
+  "characters": "Welcome",
+  "login": {
+    "header": "Login",
+    "button": "Login",
+    "username": "Username",
+    "password": "Password",
+    "error": "An error occurred, please verify your login informations"
   }
 }

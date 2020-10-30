@@ -1,8 +1,10 @@
 {
-  "home": "Bienvenue sur le boilerplate React",
-  "dashboard": "Page tableau de bord",
-  "routes": {
-    "dashboard": "Tableau de bord",
-    "home": "Accueil"
+  "characters": "Bonjour",
+  "login": {
+    "header": "Connexion",
+    "button": "Se connecter",
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "error": "Une erreur est survenue, veuillez vérifier vos informations de connexion"
   }
 }

@@ -1,5 +1,10 @@
 import React from 'react'
+import { UserContextProvider } from './contexts/user'
 
 export function AppProviders({ children }) {
-  return <div>{children}</div>
+  return (
+    <UserContextProvider>
+      <div>{children}</div>
+    </UserContextProvider>
+  )
 }
