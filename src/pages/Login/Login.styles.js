@@ -11,11 +11,21 @@ export const LoginWrapper = styled.div`
   background: rgb(2, 0, 36);
   background: linear-gradient(
     215deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(229, 28, 32, 1) 100%
+    rgb(0 21 36 / 72%) 0%,
+    rgb(59 28 229 / 0%) 100%
   );
 `
 
 export const LoginTitle = styled.h2`
   margin-bottom: 22px;
+`
+
+export const LoginForm = styled.form`
+  margin-top: 36px;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `

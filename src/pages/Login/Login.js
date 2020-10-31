@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Button, Input, Logo } from '../../components'
 import { useUserContext } from '../../contexts/user'
 import { setPageTitle } from '../../core/setPageTitle'
-import { LoginTitle, LoginWrapper } from './Login.styles'
+import { LoginForm, LoginWrapper } from './Login.styles'
 
 const FORM_INITIAL_STATE = { username: '', password: '' }
 
@@ -34,9 +34,7 @@ export default function Login() {
     <LoginWrapper>
       <Logo extended />
 
-      <LoginTitle>{t('login.header')}</LoginTitle>
-
-      <form onSubmit={stopEvent}>
+      <LoginForm onSubmit={stopEvent}>
         {FORM_CONFIG.map(({ type, key }) => (
           <Input
             key={key}
@@ -50,7 +48,7 @@ export default function Login() {
         <Button type="submit" onClick={handleLogin}>
           {t('login.button')}
         </Button>
-      </form>
+      </LoginForm>
 
       {error && <p>{t('login.error')}</p>}
     </LoginWrapper>

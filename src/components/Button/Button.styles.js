@@ -16,4 +16,5 @@ export const Btn = styled.button`
   margin: 0;
   outline: none;
   border-radius: 14px;
+  margin-left: auto;
 `
