@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Button, Input, Logo } from '../../components'
 import { useUserContext } from '../../contexts/user'
 import { setPageTitle } from '../../core/setPageTitle'
-import { LoginForm, LoginWrapper } from './Login.styles'
+import { LoginError, LoginForm, LoginWrapper } from './Login.styles'
 
 const FORM_INITIAL_STATE = { username: '', password: '' }
 
@@ -50,7 +50,7 @@ export default function Login() {
         </Button>
       </LoginForm>
 
-      {error && <p>{t('login.error')}</p>}
+      {error && <LoginError>{t('login.error')}</LoginError>}
     </LoginWrapper>
   )
 }

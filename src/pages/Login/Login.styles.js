@@ -29,3 +29,11 @@ export const LoginForm = styled.form`
   flex-direction: column;
   width: 100%;
 `
+
+export const LoginError = styled.p`
+  margin-top: 16px;
+  color: #ff2323;
+  background-color: #ff000014;
+  padding: 8px;
+  border-left: solid 4px;
+`
