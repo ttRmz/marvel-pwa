@@ -1,5 +1,8 @@
 {
-  "characters": "Bonjour",
+  "characters":  {
+    "loading": "Chargement des personnages...",
+    "more": "En savoir plus"
+  },
   "login": {
     "header": "Connexion",
     "button": "Se connecter",

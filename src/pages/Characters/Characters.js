@@ -1,24 +1,24 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { useUserContext } from '../../contexts/user'
+import { CharactersList } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacters } from '../../server/characters/query'
+import { CharactersWrapper } from './Characters.styles'
 
 export default function Characters() {
   const { t } = useTranslation()
-  const { user } = useUserContext()
 
-  const { characters } = useCharacters()
-
-  console.log('Characters -> characters', characters)
+  const { characters, loading } = useCharacters()
 
   React.useEffect(() => {
     setPageTitle('Characters')
   }, [])
 
   return (
-    <span>
-      {t('characters')} {user.username}
-    </span>
+    <CharactersWrapper>
+      {loading && t('characters.loading')}
+
+      {!loading && characters && <CharactersList characters={characters} />}
+    </CharactersWrapper>
   )
 }

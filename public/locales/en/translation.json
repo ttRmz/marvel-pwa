@@ -1,5 +1,8 @@
 {
-  "characters": "Welcome",
+  "characters": {
+    "loading": "Loading characters...",
+    "more": "More info"
+  },
   "login": {
     "header": "Login",
     "button": "Login",

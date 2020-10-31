@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const LoginWrapper = styled.div`
   width: 100%;
-  padding: 24px;
+  padding: 0 24px;
   min-height: 100vh;
   display: flex;
   align-items: center;

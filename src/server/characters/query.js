@@ -5,7 +5,7 @@ export const useCharacters = () => {
     path: '/characters',
   })
 
-  return { characters: data, ...rest }
+  return { characters: data?.data?.results, ...rest }
 }
 
 export const useCharacter = id => {

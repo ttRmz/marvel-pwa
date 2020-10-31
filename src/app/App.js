@@ -3,7 +3,7 @@ import md5 from 'md5'
 import React from 'react'
 import { RestfulProvider } from 'restful-react'
 import { useUserContext } from '../contexts/user'
-import { Main } from './App.styles'
+import { AppWrapper } from './App.styles'
 
 const ts = new Date().getTime()
 const publicKey = process.env.REACT_APP_API_PUBLIC_KEY
@@ -25,7 +25,7 @@ export function App() {
       queryParams={{ ts, apikey: publicKey, hash }}
       base={apiUrl}
     >
-      <Main>
+      <AppWrapper>
         <React.Suspense fallback="Loading">
           <Router>
             {isAuth && <Characters path="/characters" />}
@@ -35,7 +35,7 @@ export function App() {
             <Redirect noThrow from="*" to={isAuth ? 'characters' : 'login'} />
           </Router>
         </React.Suspense>
-      </Main>
+      </AppWrapper>
     </RestfulProvider>
   )
 }
