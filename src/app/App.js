@@ -13,6 +13,8 @@ const hash = md5(`${ts}${privateKey}${publicKey}`)
 const apiUrl = `https://gateway.marvel.com:443/v1/public`
 
 const Characters = React.lazy(() => import('../pages/Characters/Characters'))
+const Character = React.lazy(() => import('../pages/Character/Character'))
+
 const Login = React.lazy(() => import('../pages/Login/Login'))
 
 export function App() {
@@ -28,7 +30,12 @@ export function App() {
       <AppWrapper>
         <React.Suspense fallback="Loading">
           <Router>
-            {isAuth && <Characters path="/characters" />}
+            {isAuth && (
+              <>
+                <Characters path="/characters" />
+                <Character path="/characters/:characterId" />
+              </>
+            )}
 
             <Login path="/login" />
 

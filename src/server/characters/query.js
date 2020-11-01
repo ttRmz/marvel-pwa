@@ -13,5 +13,7 @@ export const useCharacter = id => {
     path: `/characters/${id}`,
   })
 
-  return { character: data, ...rest }
+  const [character] = data?.data?.results || []
+
+  return { character, ...rest }
 }
