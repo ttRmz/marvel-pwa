@@ -1,8 +1,9 @@
 import { useGet } from 'restful-react'
 
-export const useCharacters = () => {
+export const useCharacters = (config = {}) => {
   const { data, ...rest } = useGet({
     path: '/characters',
+    ...config,
   })
 
   return { characters: data?.data?.results, ...rest }

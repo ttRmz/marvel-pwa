@@ -15,6 +15,6 @@ export const Btn = styled.button`
   display: inline-flex;
   margin: 0;
   outline: none;
-  border-radius: 14px;
+  border-radius: 12px;
   margin-left: auto;
 `

@@ -9,5 +9,9 @@
     "username": "Username",
     "password": "Password",
     "error": "An error occurred, please verify your login informations"
+  },
+  "filters": {
+    "name": "A-Z",
+    "modified": "Last modified"
   }
 }
