@@ -17,13 +17,11 @@ export default function Search() {
 
   const nameStartsWith = useDebounce(search, 1000)
 
-  console.log('Search -> search', search)
   const { characters, loading } = useCharacters({
     queryParams: {
       nameStartsWith,
     },
   })
-  console.log('Search -> characters', characters)
 
   React.useEffect(() => {
     setPageTitle(t('search.title'))
