@@ -4,6 +4,7 @@ import { Link } from '@reach/router'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, CharactersList, Logo } from '../../components'
+import { useFavouritesContext } from '../../contexts/favourites'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacters } from '../../server/characters/query'
 import {
@@ -12,21 +13,31 @@ import {
   CharactersWrapper,
 } from './Characters.styles'
 
-const FILTERS = [{ key: 'name' }, { key: 'modified' }]
+const FILTERS = [
+  { key: 'name', i18n_key: 'name' },
+  { key: 'modified', i18n_key: 'modified' },
+  { key: 'name', i18n_key: 'favourites' },
+]
 
 export default function Characters() {
-  const [filter, setFilter] = React.useState('name')
+  const [filter, setFilter] = React.useState(FILTERS[0])
+  const { favourites } = useFavouritesContext()
   const { t } = useTranslation()
 
   const { characters, loading } = useCharacters({
     queryParams: {
-      orderBy: filter,
+      orderBy: filter.key,
     },
   })
 
   React.useEffect(() => {
     setPageTitle(t('characters.title'))
   }, [t])
+
+  const filteredCharacters =
+    filter.i18n_key === 'favourites'
+      ? characters?.filter(({ id }) => favourites.includes(id))
+      : characters
 
   return (
     <CharactersWrapper>
@@ -42,21 +53,23 @@ export default function Characters() {
         </Link>
       </CharactersHeader>
 
-      {FILTERS.map(({ key }) => (
+      {FILTERS.map(({ key, i18n_key }) => (
         <CharactersFilter
           as={Button}
-          key={key}
-          onClick={() => setFilter(key)}
-          highlighted={filter === key}
+          key={i18n_key}
+          onClick={() => setFilter({ key, i18n_key })}
+          highlighted={filter.i18n_key === i18n_key}
           light
         >
-          {t(`filters.${key}`)}
+          {t(`filters.${i18n_key}`)}
         </CharactersFilter>
       ))}
 
       {loading && <h3>{t('characters.loading')}</h3>}
 
-      {!loading && characters && <CharactersList characters={characters} />}
+      {!loading && characters && (
+        <CharactersList characters={filteredCharacters} />
+      )}
     </CharactersWrapper>
   )
 }

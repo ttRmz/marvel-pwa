@@ -4,11 +4,11 @@ import { Link } from '@reach/router'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { CharacterName } from '../CharacterName'
 import {
   CharacterCardDescription,
   CharacterCardDetails,
   CharacterCardMore,
-  CharacterCardName,
   CharacterCardThumbnail,
   CharacterCardWrapper,
 } from './CharacterCard.styles'
@@ -26,7 +26,11 @@ export function CharacterCard({ character }) {
         />
 
         <CharacterCardDetails>
-          <CharacterCardName>{character.name}</CharacterCardName>
+          <CharacterName
+            character={character}
+            as={Link}
+            to={`/characters/${character.id}`}
+          />
 
           <CharacterCardDescription>
             {character.description}

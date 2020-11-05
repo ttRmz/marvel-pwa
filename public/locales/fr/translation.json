@@ -19,7 +19,8 @@
   },
   "filters": {
     "name": "A-Z",
-    "modified": "Modifiés récemment"
+    "modified": "Modifiés récemment",
+    "favourites": "Favoris"
   },
   "back": "Retour",
   "logout": { "title": "Deconnexion", "loading": "Deconnexion..." }

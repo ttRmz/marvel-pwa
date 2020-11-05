@@ -1,12 +1,11 @@
 import { Redirect } from '@reach/router'
 import React from 'react'
-import { BackToCharacters } from '../../components'
+import { BackToCharacters, CharacterName } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacter } from '../../server/characters/query'
 import {
   CharacterCover,
   CharacterDescription,
-  CharacterTitle,
   CharacterWrapper,
 } from './Character.styles'
 
@@ -28,8 +27,8 @@ export default function Character({ characterId }) {
           <CharacterCover
             thumbnail={`${character.thumbnail.path}.${character.thumbnail.extension}`}
           />
-          <CharacterTitle>{character?.name}</CharacterTitle>
-          <CharacterDescription>{character?.description}</CharacterDescription>
+          <CharacterName character={character} large />
+          <CharacterDescription>{character.description}</CharacterDescription>
         </>
       )}
     </CharacterWrapper>

@@ -7,10 +7,10 @@ export const CharacterCardWrapper = styled.li`
   margin-bottom: 18px;
   overflow: hidden;
 
-  a {
+  & > a {
+    height: 160px;
     display: flex;
     width: 100%;
-    height: 160px;
   }
 `
 
@@ -29,12 +29,6 @@ export const CharacterCardDetails = styled(CharacterCardSide)`
   padding: 12px 0;
   display: flex;
   flex-direction: column;
-`
-
-export const CharacterCardName = styled.h3`
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 12px;
 `
 
 export const CharacterCardDescription = styled.p`

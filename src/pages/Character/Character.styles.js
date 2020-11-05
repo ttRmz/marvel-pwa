@@ -34,12 +34,6 @@ export const CharacterCover = styled.div`
   }
 `
 
-export const CharacterTitle = styled.h1`
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 12px;
-`
-
 export const CharacterDescription = styled.p`
   color: #3a3a3a;
   font-size: 12px;

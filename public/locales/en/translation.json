@@ -19,7 +19,8 @@
   },
   "filters": {
     "name": "A-Z",
-    "modified": "Last modified"
+    "modified": "Last modified",
+    "favourites": "Favourites"
   },
   "back": "Back",
   "logout": { "title": "Sign out", "loading": "Disconnecting..." }
