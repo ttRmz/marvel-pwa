@@ -1,3 +1,4 @@
+import { Link } from '@reach/router'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button, CharactersList } from '../../components'
@@ -23,6 +24,8 @@ export default function Characters() {
 
   return (
     <CharactersWrapper>
+      <Link to="/search">Search</Link>
+
       {FILTERS.map(({ key }) => (
         <CharactersFilter
           as={Button}

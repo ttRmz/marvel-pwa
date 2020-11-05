@@ -10,6 +10,11 @@
     "password": "Password",
     "error": "An error occurred, please verify your login informations"
   },
+  "search": {
+    "title": "Search",
+    "input": "Search character",
+    "no_result": "No character found"
+  },
   "filters": {
     "name": "A-Z",
     "modified": "Last modified"

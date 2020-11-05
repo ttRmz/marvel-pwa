@@ -10,6 +10,11 @@
     "password": "Mot de passe",
     "error": "Une erreur est survenue, veuillez vérifier vos informations de connexion"
   },
+  "search": {
+    "title": "Rechercher",
+    "input": "Rechercher un personnage",
+    "no_result": "Aucun personnage trouvé"
+  },
   "filters": {
     "name": "A-Z",
     "modified": "Modifiés récemment"

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { MessageBlock } from '../../components'
 
 export const LoginWrapper = styled.div`
   width: 100%;
@@ -30,10 +31,7 @@ export const LoginForm = styled.form`
   width: 100%;
 `
 
-export const LoginError = styled.p`
-  margin-top: 16px;
+export const LoginError = styled(MessageBlock)`
   color: #ff2323;
   background-color: #ff000014;
-  padding: 8px;
-  border-left: solid 4px;
 `

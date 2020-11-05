@@ -12,6 +12,8 @@ const privateKey = process.env.REACT_APP_API_PRIVATE_KEY
 const hash = md5(`${ts}${privateKey}${publicKey}`)
 const apiUrl = `https://gateway.marvel.com:443/v1/public`
 
+const Search = React.lazy(() => import('../pages/Search/Search'))
+
 const Characters = React.lazy(() => import('../pages/Characters/Characters'))
 const Character = React.lazy(() => import('../pages/Character/Character'))
 
@@ -32,6 +34,8 @@ export function App() {
           <Router>
             {isAuth && (
               <>
+                <Search path="/search" />
+
                 <Characters path="/characters" />
                 <Character path="/characters/:characterId" />
               </>
