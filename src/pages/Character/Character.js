@@ -14,8 +14,8 @@ export default function Character({ characterId }) {
   const { character, loading, error } = useCharacter(characterId)
 
   React.useEffect(() => {
-    setPageTitle('Character')
-  }, [])
+    setPageTitle(character?.name)
+  }, [character])
 
   return error ? (
     <Redirect noThrow to="/characters" />

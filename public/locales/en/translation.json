@@ -1,9 +1,11 @@
 {
   "characters": {
+    "title": "Characters",
     "loading": "Loading characters...",
     "more": "More info"
   },
   "login": {
+    "title": "Login",
     "header": "Login",
     "button": "Login",
     "username": "Username",

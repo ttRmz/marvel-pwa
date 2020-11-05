@@ -1,9 +1,11 @@
 {
   "characters": {
+    "title": "Personnages",
     "loading": "Chargement des personnages...",
     "more": "En savoir plus"
   },
   "login": {
+    "title": "Connexion",
     "header": "Connexion",
     "button": "Se connecter",
     "username": "Nom d'utilisateur",

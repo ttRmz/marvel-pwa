@@ -25,8 +25,8 @@ export default function Characters() {
   })
 
   React.useEffect(() => {
-    setPageTitle('Characters')
-  }, [])
+    setPageTitle(t('characters.title'))
+  }, [t])
 
   return (
     <CharactersWrapper>

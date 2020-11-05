@@ -19,8 +19,8 @@ export default function Login() {
   const [form, setForm] = React.useState(FORM_INITIAL_STATE)
 
   React.useEffect(() => {
-    setPageTitle('Login')
-  }, [])
+    setPageTitle(t('login.title'))
+  }, [t])
 
   const handleLogin = () => {
     login(form)
