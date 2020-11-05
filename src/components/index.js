@@ -1,3 +1,4 @@
+export * from './BackToCharacters'
 export * from './Button'
 export * from './CharacterCard'
 export * from './CharactersList'

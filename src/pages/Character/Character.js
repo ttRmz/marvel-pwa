@@ -1,12 +1,13 @@
 import { Redirect } from '@reach/router'
 import React from 'react'
+import { BackToCharacters } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacter } from '../../server/characters/query'
 import {
-  CharacterTitle,
-  CharacterWrapper,
   CharacterCover,
   CharacterDescription,
+  CharacterTitle,
+  CharacterWrapper,
 } from './Character.styles'
 
 export default function Character({ characterId }) {
@@ -20,6 +21,8 @@ export default function Character({ characterId }) {
     <Redirect noThrow to="/characters" />
   ) : (
     <CharacterWrapper>
+      <BackToCharacters />
+
       {!loading && character && (
         <>
           <CharacterCover

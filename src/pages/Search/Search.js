@@ -1,7 +1,7 @@
 import { useDebounce } from '@ttrmz/react-utils'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { CharactersList, Input } from '../../components'
+import { BackToCharacters, CharactersList, Input } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacters } from '../../server/characters/query'
 import { SearchWrapper, SearchInput, SearchError } from './Search.styles'
@@ -32,6 +32,8 @@ export default function Search() {
 
   return (
     <SearchWrapper>
+      <BackToCharacters />
+
       <Input
         as={SearchInput}
         value={search}

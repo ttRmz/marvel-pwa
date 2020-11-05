@@ -18,5 +18,6 @@
   "filters": {
     "name": "A-Z",
     "modified": "Modifiés récemment"
-  }
+  },
+  "back": "Retour"
 }

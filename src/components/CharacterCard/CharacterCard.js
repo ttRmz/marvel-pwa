@@ -18,7 +18,7 @@ export function CharacterCard({ character }) {
 
   return (
     <CharacterCardWrapper>
-      <Link to={`${character.id}`}>
+      <Link to={`/characters/${character.id}`}>
         <CharacterCardThumbnail
           as="img"
           src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
