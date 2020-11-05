@@ -1,10 +1,16 @@
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from '@reach/router'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Button, CharactersList } from '../../components'
+import { Button, CharactersList, Logo } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacters } from '../../server/characters/query'
-import { CharactersFilter, CharactersWrapper } from './Characters.styles'
+import {
+  CharactersFilter,
+  CharactersHeader,
+  CharactersWrapper,
+} from './Characters.styles'
 
 const FILTERS = [{ key: 'name' }, { key: 'modified' }]
 
@@ -24,7 +30,13 @@ export default function Characters() {
 
   return (
     <CharactersWrapper>
-      <Link to="/search">Search</Link>
+      <CharactersHeader>
+        <Logo />
+
+        <Link to="/search">
+          <FontAwesomeIcon icon={faSearch} />
+        </Link>
+      </CharactersHeader>
 
       {FILTERS.map(({ key }) => (
         <CharactersFilter

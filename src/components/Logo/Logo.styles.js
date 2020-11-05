@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Figure = styled.figure`
-  width: ${props => (props.extended ? '100%' : '108px')};
+  width: ${props => (props.extended ? '100%' : '72px')};
   display: inline-flex;
   align-items: center;
   justify-content: center;
