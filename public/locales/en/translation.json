@@ -21,5 +21,6 @@
     "name": "A-Z",
     "modified": "Last modified"
   },
-  "back": "Back"
+  "back": "Back",
+  "logout": { "title": "Sign out", "loading": "Disconnecting..." }
 }

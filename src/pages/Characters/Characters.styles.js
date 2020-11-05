@@ -11,6 +11,14 @@ export const CharactersHeader = styled.div`
   align-items: center;
   margin-top: 8px;
   margin-bottom: 18px;
+
+  figure {
+    margin-right: auto;
+  }
+
+  a:last-child {
+    margin-left: 12px;
+  }
 `
 
 export const CharactersFilter = styled.button`

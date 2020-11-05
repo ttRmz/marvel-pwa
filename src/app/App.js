@@ -18,6 +18,7 @@ const Characters = React.lazy(() => import('../pages/Characters/Characters'))
 const Character = React.lazy(() => import('../pages/Character/Character'))
 
 const Login = React.lazy(() => import('../pages/Login/Login'))
+const Logout = React.lazy(() => import('../pages/Logout/Logout'))
 
 export function App() {
   const { user } = useUserContext()
@@ -42,6 +43,7 @@ export function App() {
             )}
 
             <Login path="/login" />
+            <Logout path="/logout" />
 
             <Redirect noThrow from="*" to={isAuth ? 'characters' : 'login'} />
           </Router>

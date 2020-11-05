@@ -1,4 +1,4 @@
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from '@reach/router'
 import React from 'react'
@@ -35,6 +35,10 @@ export default function Characters() {
 
         <Link to="/search">
           <FontAwesomeIcon icon={faSearch} />
+        </Link>
+
+        <Link to="/logout">
+          <FontAwesomeIcon icon={faSignOutAlt} />
         </Link>
       </CharactersHeader>
 
