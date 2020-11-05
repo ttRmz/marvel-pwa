@@ -26,11 +26,7 @@ export function CharacterCard({ character }) {
         />
 
         <CharacterCardDetails>
-          <CharacterName
-            character={character}
-            as={Link}
-            to={`/characters/${character.id}`}
-          />
+          <CharacterName character={character} />
 
           <CharacterCardDescription>
             {character.description}
