@@ -9,11 +9,18 @@ export const SearchWrapper = styled.div`
 `
 
 export const SearchInput = styled.input`
-  box-shadow: 0 0 50px -12px #666;
   background-color: #ffffff;
   padding: 14px 16px;
-  border-radius: 26px;
+  flex: 1;
+  margin: 0;
+`
+
+export const SearchInputWrapper = styled.div`
+  display: flex;
+  box-shadow: 0 0 50px -12px #666;
   margin-bottom: 24px;
+  border-radius: 32px;
+  overflow: hidden;
 `
 
 export const SearchError = styled(MessageBlock)`

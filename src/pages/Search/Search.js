@@ -4,7 +4,12 @@ import { useTranslation } from 'react-i18next'
 import { BackToCharacters, CharactersList, Input } from '../../components'
 import { setPageTitle } from '../../core/setPageTitle'
 import { useCharacters } from '../../server/characters/query'
-import { SearchWrapper, SearchInput, SearchError } from './Search.styles'
+import {
+  SearchError,
+  SearchInput,
+  SearchInputWrapper,
+  SearchWrapper,
+} from './Search.styles'
 
 export default function Search() {
   const { t } = useTranslation()
@@ -34,12 +39,14 @@ export default function Search() {
     <SearchWrapper>
       <BackToCharacters />
 
-      <Input
-        as={SearchInput}
-        value={search}
-        onChange={handleChangeSearchValue}
-        placeholder={t('search.input')}
-      />
+      <SearchInputWrapper>
+        <Input
+          as={SearchInput}
+          value={search}
+          onChange={handleChangeSearchValue}
+          placeholder={t('search.input')}
+        />
+      </SearchInputWrapper>
 
       {characters && <CharactersList characters={characters} />}
       {hasNoResult && <SearchError>{t('search.no_result')}</SearchError>}

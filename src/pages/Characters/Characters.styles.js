@@ -9,20 +9,20 @@ export const CharactersHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 8px;
-  margin-bottom: 18px;
+  margin: 18px 0;
+  font-size: 18px;
 
   figure {
     margin-right: auto;
   }
 
   a:last-child {
-    margin-left: 12px;
+    margin-left: 18px;
   }
 `
 
 export const CharactersFilter = styled.button`
   font-size: 12px;
   margin-right: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 `
